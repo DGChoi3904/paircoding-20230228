@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">  
+  <title>Document</title>
+  <style>
+    #root {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      font-family: 'Inter';
+      color : #ffffff;
+      background-color : #1e1e1e;
+
+      width : 430px;
+      height  : 932px;
+      padding : 10% 5%;
+    }
+    div {
+      width: 100%;
+      height: 100%;
+    }
+    #title {
+      font-size: 24px;
+    
+    }
+    div:nth-child(1){
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    #paragraph {
+      font-size: 12px;
+      text-align: justify;
+      line-height: 130%;
+    }
+    div:nth-child(2){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div:nth-child(3){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding : 10%;
+    }
+    hr {
+      width : 60%;
+    }
+    #circle {
+      width: 82px;
+      height: 82px;
+      box-sizing:border-box;
+      border-color : white;
+      border-radius : 50%;
+      background-color : #FFFFFF;
+
+    }
+  </style>
+</head>
+<body>
+  <!--추정되는 기본 구조-->
+  <div id="root">
+    <div>
+      <div id="title">Lorem Ipsum</div>
+      <hr>
+    </div>
+    <div>
+      <p id="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <div>
+      <div id="circle"></div>
+    </div>
+  </div>
+</body>
+</html>
