@@ -7,57 +7,9 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="root"></div>
   <!--여기 아래에 스크립트 링크를 걸어주세요-->
-  <!--<script src="parc1.js"></script>-->
-  <script> 
-    const trainingData = {
-      title : "Lorem Ipsum",
-      paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      color : ["#1e1e1e", "#ffffff"],
-      createElement: function(elementName, textContent) {
-        let element = document.createElement(elementName);
-        element.textContent = textContent;
-        return element;
-      },
-      setSize: function(element, width, height, boxSizing ){
-        element.style.width = width;
-        element.style.height = height;
-        element.style.boxSizing = boxSizing;
-        return element;
-      },
-      setflex: function(element, flexDir, jContent, aItems) {
-        element.style.display = "flex";
-        element.style.flexDirection = flexDir;
-        element.style.justifyContent = jContent;
-        element.style.alignItems = aItems;
-        return element;
-      },
-      setFont: function(element, fFam) {
-        element.style.fontFamily = fFam;
-        return elementName;
-      },
-      setFontSize: function(element, fSize) {
-        element.style.fontSize = fSize;
-        return element;
-      },
-      setFontAlign: function(element, tAlign) {
-        element.style.textAlign = tAlign;
-        return element;
-      },
-      setCircle: function(element, bRadius, bgColor){
-        element.style.borderRadius = bRadius;
-        element.style.bgColor = bgColor;
-      }
-    }
-    const root = document.getElementById("root");
-    const header = trainingData.createElement("div", 
-    trainingData.title);
-    const hr = trainingData.createElement("hr", "");
-    header.appendChild(hr);
-    root.appendChild(header);
-    console.log(header);
-    console.dir(trainingData);
+  <script src="pagemaker.js">
+    training
   </script>
 </body>
 </html>
