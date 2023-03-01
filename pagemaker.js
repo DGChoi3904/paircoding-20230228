@@ -157,17 +157,16 @@
           flexDirection : "column",
           justifyContent : "center",
           alignItems : "center",
-
           //debug set
           border : "1px solid black"
         },
         title : {
           //type set
           type : "div",
-          class : "title",
+          id : "title",
           //box set
-          width: "100%",
-          height: "100%",
+          width: "50%",
+          height: "auto",
           boxSizing : "border-box",
           //font set
           fontFamily : "inherit",
@@ -179,7 +178,46 @@
           flexDirection: "column",
           justifyContent: "flex-end",
           alignItems: "center",
-          //content set
+          //debug set
+          border: "1px solid red",
+        },
+        paragraph : {
+          //type set
+          type : "div",
+          id : "paragraph",
+          //box set
+          width: "auto",
+          height: "auto",
+          boxSizing : "border-box",
+          //font set
+          fontFamily: "inherit",
+          fontSize: "1em",
+          textAlign: "justify",
+          //display set
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        },
+        circle : {
+          //type set
+          type : "div",
+          id : "circle",
+          //box set
+          width: "82px",
+          height: "82px",
+          boxSizing : "border-box",
+          //color set
+          color : 0,
+          backgroundColor : 0,
+          //border set
+          borderColor : 0,
+          borderRadius : "50%",
+          //display set
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }
         // main : {
 
@@ -209,18 +247,95 @@
         root.style.justifyContent = this.elementSet.root.justifyContent;
         root.style.alignItems = this.elementSet.root.alignItems;
         //debug set
-        root.style.border = this.elementSet.root.border;
-        let title = document.createElement("div");
-        title.setAttribute("class", "title");
-        let paragraph = document.createElement("div");
-        paragraph.setAttribute("class", "paragraph");
-        let circle = document.createElement("div");
-        circle.setAttribute("class", "circle");
+        root.style.border = "1px solid black";
+        root.style.marginTop = "1%";
+        root.style.marginBottom = "1%";
+        //type set
+        let title = document.createElement(this.elementSet.title.type);
+        title.id = this.elementSet.title.id;
+        //content set
+        title.textContent = this.elements.title;
+        //font set
+        title.style.fontFamily = this.elementSet.title.fontFamily;
+        title.style.fontSize = this.elementSet.title.fontSize;
+        //color set
+        title.style.color = this.colorSet[this.elementSet.title.color];
+        title.style.backgroundColor = this.colorSet[this.elementSet.title.backgroundColor];
+        //box set
+        title.style.width = this.elementSet.title.width;
+        title.style.height = this.elementSet.title.height;
+        title.style.boxSizing = this.elementSet.title.boxSizing;
+        title.style.borderBottom = "1px solid black";
+        title.style.textAlign = "center";
+        //debug set
+        //title.style.border = "1px solid black";
+        title.style.marginTop = "1%";
+        title.style.marginBottom = "1%";
+        //type set
+        let paragraph = document.createElement(this.elementSet.paragraph.type);
+        paragraph.id = this.elementSet.paragraph.id;
+        paragraph.textContent = this.elements.paragraph;
+        //font set
+        paragraph.style.fontFamily = this.elementSet.paragraph.fontFamily;
+        paragraph.style.fontSize =  this.elementSet.paragraph.fontSize;
+        //color set
+        paragraph.style.color = this.colorSet[this.elementSet.paragraph.color];
+        paragraph.style.backgroundColor = this.colorSet[this.elementSet.paragraph.backgroundColor];
+        //box set
+        paragraph.style.width = this.elementSet.paragraph.width;
+        paragraph.style.height = this.elementSet.paragraph.height;
+        paragraph.style.boxSizing = this.elementSet.paragraph.boxSizing;
+        //debug set
+        //paragraph.style.border = "1px solid black";
+        paragraph.style.marginTop = "1%";
+        paragraph.style.marginBottom = "1%";
+        let circle = document.createElement(this.elementSet.circle.type);
+        circle.id = this.elementSet.circle.id;
+        circle.style.width = this.elementSet.circle.width;
+        circle.style.height = this.elementSet.circle.height;
+        circle.style.color = this.colorSet[this.elementSet.circle.color];
+        circle.style.backgroundColor = this.colorSet[this.elementSet.circle.backgroundColor];
+        circle.style.borderRadius = this.elementSet.circle.borderRadius;
+        circle.style.borderColor = this.colorSet[this.elementSet.circle.borderColor];
+        //debug set
+        //circle.style.border = "1px solid black";
+        circle.style.marginTop = "1%";
+        circle.style.marginBottom = "1%";
         root.appendChild(title);
         root.appendChild(paragraph);
         root.appendChild(circle);
         return root;
+      },
+      changeColor: function() {
+        if(this.colorSet[0] === "#1E1E1E"){
+          this.colorSet[0] = "#FFFFFF";
+          this.colorSet[1] = "#1E1E1E";
+          root.style.color = this.colorSet[this.elementSet.root.color];
+          root.style.backgroundColor = this.colorSet[this.elementSet.root.backgroundColor];
+          title.style.color = this.colorSet[this.elementSet.title.color];
+          title.style.backgroundColor = this.colorSet[this.elementSet.title.backgroundColor];
+          paragraph.style.color = this.colorSet[this.elementSet.paragraph.color];
+          paragraph.style.backgroundColor = this.colorSet[this.elementSet.paragraph.backgroundColor];
+          circle.style.color = this.colorSet[this.elementSet.circle.color];
+          circle.style.borderColor = this.colorSet[this.elementSet.circle.borderColor];
+          circle.style.backgroundColor = this.colorSet[this.elementSet.circle.backgroundColor];
+        }else {
+          this.colorSet[0] = "#1E1E1E";
+          this.colorSet[1] = "#FFFFFF";
+          root.style.color = this.colorSet[this.elementSet.root.color];
+          root.style.backgroundColor = this.colorSet[this.elementSet.root.backgroundColor];
+          title.style.color = this.colorSet[this.elementSet.title.color];
+          title.style.backgroundColor = this.colorSet[this.elementSet.title.backgroundColor];
+          paragraph.style.color = this.colorSet[this.elementSet.paragraph.color];
+          paragraph.style.backgroundColor = this.colorSet[this.elementSet.paragraph.backgroundColor];
+          circle.style.color = this.colorSet[this.elementSet.circle.color];
+          circle.style.borderColor = this.colorSet[this.elementSet.circle.borderColor];
+          circle.style.backgroundColor = this.colorSet[this.elementSet.circle.backgroundColor];
+        }
       }
     }
     console.log(trainingData);
     document.body.appendChild(trainingData.setForm());
+    document.body.addEventListener("click", function(){
+      trainingData.changeColor();
+    })
